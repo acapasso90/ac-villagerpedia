@@ -40,10 +40,10 @@ return(
     <div className="VillagerInfo" >
         
         <img src={icon} alt={name} className="villagerIcon" onClick={showInfo}/>
-        {displayname}
+        <p className="villagerName">{displayname} </p>
 
         <div className={`hidden${name.replace(" ", "-")}`} id="hiddenInfo" style={{color: textColor, border: `5px solid ${textColor}`, backgroundColor: bubbleColor, display: "none"}}>
-            <div className="row">
+            <div className="row" >
                 <div className="column">
                     <img src={image} alt={name} className="villagerImage" style={{color: textColor, border: `5px solid ${textColor}`}} />
                     <h1> {name} </h1>

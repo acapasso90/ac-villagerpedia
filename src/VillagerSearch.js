@@ -52,9 +52,9 @@ useEffect(() => {
           <div className="VillagerSearch">
               <div className="blackout"> </div>
               <header>
-                <div className="row">
+                <div className="row" >
                   <div className="headerCol">
-                    <div className="row">
+                    <div className="row" id="mobileRow">
                       <img src={leafIcon} alt="leaficon" className="leafIcon" />
                       <p> Villagerpedia </p>
                     </div>
@@ -99,7 +99,7 @@ useEffect(() => {
             <header>
                 <div className="row">
                   <div className="headerCol">
-                    <div className="row">
+                    <div className="row" id="mobileRow">
                       <img src={leafIcon} alt="leaficon" className="leafIcon" />
                       <h2> Villagerpedia </h2>
                     </div>
@@ -111,7 +111,7 @@ useEffect(() => {
                   </div>
                 </div>
              </header>
-             <img src={loader} alt="loading" />
+             <img src={loader} alt="loading" className="loadingImg" />
            <h2>Loading Villagers</h2>
          </div>);
    }
