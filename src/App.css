@@ -1,4 +1,4 @@
-::selection{background-color:#74573c;
+::selection{background-color:#3c744a;
   color: #ffff;}
 
 
@@ -20,6 +20,16 @@ text-decoration: none;}
 background-image: url('./images/confetti.gif');
 }
   
+.blackout {background-color: rgba(5, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
 body, header {background-color: #fdf3c9;}
 
 body, input { font-weight: bold;
@@ -36,23 +46,25 @@ body, input { font-weight: bold;
 
   button, input::placeholder, .birthday  {  color: #440f0f; }
   
-  button, .birthday {border-radius: 4px;
+  button, .birthday, #hiddenInfo {border-radius: 4px;
    }
 
   button {
-
+    position: absolute;
+    top: 1%;
+    right: 1%;
     color: #440f0f;
     padding: 8px 18px;
     font-weight: bold;
     white-space: nowrap;
-    outline:none;
+    outline: none;
     font-family: 'Short Stack', cursive;
     font-size: 16px;
     user-select: none;
     }
     
-    button:active { position: relative;
-    top: 2px;}
+    button:active {
+    margin-top: 2px;}
     
     button:hover {background-color: #f0b786;
     }
@@ -72,11 +84,12 @@ header {position: fixed;
 top: 0;
 left: 0;
 border-bottom: 2px solid #702b2b;
+user-select: none;
 width: 100%;}
 
 input {
   font-size: 13pt;
-  width: 20%;
+  width: 275px;
   border-radius: 5px;
 position: fixed;
 right: 1%;
@@ -89,7 +102,7 @@ top: 4%;
 left: 5%;
 width: 90%;
 height: 90%;
-border-radius: 2%;}
+z-index: 1;}
 
 .leafIcon {width: 50px;
 height: 50px;}
@@ -108,7 +121,10 @@ flex-direction: row;}
 ul {list-style: none;
   padding: 0;}
 
-.villagerIcon {max-width: 115px;}
+.villagerIcon {max-width: 115px;
+}
+
+.villagerIcon:hover {cursor: pointer}
 
 .villagerImage {max-width: 300px;}
 

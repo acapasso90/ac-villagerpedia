@@ -49,6 +49,7 @@ useEffect(() => {
         var totalVillagers = villagerData.length;
         return( 
           <div className="VillagerSearch">
+              <div className="blackout"> </div>
               <header>
                 <div className="row">
                   <div className="headerCol">
@@ -74,13 +75,12 @@ useEffect(() => {
                     if (birthday.includes(today)){
                       return ( 
                         <div className="birthday" key={index}>
-                          <img src={villager[1][`icon_uri`]} className="villagerIcon" alt={name} />
-                          <p> It's {villager[1].name[`name-EUen`]}'s Birthday! </p>
+                         <VillagerInfo data={villager} birthday={"yes"}   />
                         </div>)
                     }
                                     
                     return(
-                      <VillagerInfo data={villager} key={index}  />)
+                      <VillagerInfo data={villager} key={index} birthday={"no"}   />)
                       
                   }
                     else {        return(

@@ -13,27 +13,35 @@ export default function VillagerInfo(props){
     const textColor = villager[`text-color`];
     const image = villager[`image_uri`];
     const species = villager.species;
-
+    // Checks if it's Birthday, if it is display's "its villager's birthday" instead of "villager"
+    const isBday = (props.birthday === "yes");
+    let displayname = name;
+    if (isBday) {displayname = `Today is ${name}'s birthday!`}
     const noScroll = document.querySelector('html');
 
 function showInfo(){
     const hiddenInfo = document.querySelector(`.hidden${name.replace(" ", "-")}`);
+    const blackout = document.querySelector('.blackout');
     hiddenInfo.style.display = "block";
+    blackout.style.display = "block";
     noScroll.classList.add('noScroll');
 }
 
 function hideInfo(){
     const hiddenInfo = document.querySelector(`.hidden${name.replace(" ", "-")}`);
+    const blackout = document.querySelector('.blackout');
     hiddenInfo.style.display = "none";
+    blackout.style.display = "none";
     noScroll.classList.remove('noScroll');
 }
 
 
 return( 
     <div className="VillagerInfo" >
-          
+        
         <img src={icon} alt={name} className="villagerIcon" onClick={showInfo}/>
-        {name}
+        {displayname}
+
         <div className={`hidden${name.replace(" ", "-")}`} id="hiddenInfo" style={{color: textColor, border: `5px solid ${textColor}`, backgroundColor: bubbleColor, display: "none"}}>
             <div className="row">
                 <div className="column">
