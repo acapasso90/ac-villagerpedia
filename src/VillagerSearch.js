@@ -37,7 +37,7 @@ useEffect(() => {
     let mounted = true;
     const cancelTokenSource = axios.CancelToken.source();
    if (mounted) {
-        axios.get(`http://acnhapi.com/v1/villagers/`, {  
+        axios.get(`https://acnhapi.com/v1/villagers/`, {  
         cancelToken: cancelTokenSource.token
       }).then(setVillagers);}
     return function cleanup() {
