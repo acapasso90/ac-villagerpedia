@@ -56,7 +56,7 @@ useEffect(() => {
                   <div className="headerCol">
                     <div className="row">
                       <img src={leafIcon} alt="leaficon" className="leafIcon" />
-                      <h2> Villagerpedia </h2>
+                      <p> Villagerpedia </p>
                     </div>
                   </div>
                   <div className="headerCol">

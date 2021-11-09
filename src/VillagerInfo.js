@@ -57,9 +57,7 @@ return(
                         <li>Hobby: {hobby}</li>
                     </ul>
                 </div>
-                <div className="column">
                     <button onClick={hideInfo}> Back </button>
-                </div>
             </div>
         </div> 
     </div>

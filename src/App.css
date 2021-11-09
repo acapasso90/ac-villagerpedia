@@ -70,7 +70,7 @@ letter-spacing: 1px; }
     button:hover {background-color: #f0b786;
     }
     
-.column {width: 33%;
+.column {width: 30%;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -100,6 +100,9 @@ box-shadow: 0 2px 5px #e2c198;
 user-select: none;
 width: 100%;}
 
+header p {font-size: 23pt;
+padding-top: 6px;}
+
 input {
   font-size: 13pt;
   width: 295px;
@@ -108,7 +111,9 @@ position: fixed;
 right: 1%;
 top: 2%; }
 
-.headerCol {width: 50%;}
+.headerCol {width: 50%;
+}
+
 
 #hiddenInfo {position: fixed;
 top: 4%;
@@ -123,7 +128,9 @@ li {padding-top: 20px;
 font-size: 13pt;}
 
 .leafIcon {width: 50px;
-height: 50px;}
+height: 50px;
+margin-right: 10px;
+padding-left: 5px;}
 
 .loading img {margin: 0;
 padding: 0;
@@ -161,3 +168,29 @@ flex-direction: column;
 align-items: center;}
 
 .VillagerSearch {margin-top: 80px;}
+
+@media only screen and (max-width: 500px) {
+
+  .column {width: 100%;
+ }
+
+  #hiddenInfo {
+    top: 2%;
+    left: 2%;
+    width: 93%;
+    height: 93%;
+    }
+
+  #hiddenInfo .row {flex-direction: column}
+
+  .grid {  
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+    row-gap: 35px;
+  }
+
+  .villagerImage {max-width: 200px;
+    margin-top: 15px;
+  }
+}
