@@ -30,10 +30,11 @@ background-image: url('./images/confetti.gif');
   display: none;
   z-index: 1;
 }
-body, header {background-color: #fdf3c9;}
+body, header, footer {background-color: #fdf3c9;}
 
 body, input { font-weight: bold;
-  font-family: 'Short Stack', cursive; }
+  font-family: 'Short Stack', cursive;
+letter-spacing: 1px; }
   
   body {
   color: #8B7A65;
@@ -69,7 +70,12 @@ body, input { font-weight: bold;
     button:hover {background-color: #f0b786;
     }
     
-.column {width: 33%;}
+.column {width: 33%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+align-items: center;}
 
 .grid {  
   display: grid;
@@ -78,18 +84,25 @@ body, input { font-weight: bold;
   row-gap: 55px;
 }
 
-h2 {margin: 10px 0 10px 0 }
+footer {
+padding-top: 68px;}
+
+
+h1 { letter-spacing: 2px;}
+
+h2 {margin: 10px 0 10px 0;
+ }
 
 header {position: fixed;
 top: 0;
 left: 0;
-border-bottom: 2px solid #702b2b;
+box-shadow: 0 2px 5px #e2c198;
 user-select: none;
 width: 100%;}
 
 input {
   font-size: 13pt;
-  width: 275px;
+  width: 295px;
   border-radius: 5px;
 position: fixed;
 right: 1%;
@@ -104,8 +117,22 @@ width: 90%;
 height: 90%;
 z-index: 1;}
 
+#hiddenInfo .row {height: 70%;}
+
+li {padding-top: 20px;
+font-size: 13pt;}
+
 .leafIcon {width: 50px;
 height: 50px;}
+
+.loading img {margin: 0;
+padding: 0;
+max-height: 240px;
+position: relative;
+top: 60px;}
+
+.loading h2 {margin: 0;
+}
 
 .noScroll {
   overflow: hidden;}
@@ -126,7 +153,8 @@ ul {list-style: none;
 
 .villagerIcon:hover {cursor: pointer}
 
-.villagerImage {max-width: 300px;}
+.villagerImage {max-width: 300px;
+border-radius: 2px;}
 
 .VillagerInfo {display: flex;
 flex-direction: column;

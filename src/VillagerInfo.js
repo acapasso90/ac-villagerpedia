@@ -45,12 +45,12 @@ return(
         <div className={`hidden${name.replace(" ", "-")}`} id="hiddenInfo" style={{color: textColor, border: `5px solid ${textColor}`, backgroundColor: bubbleColor, display: "none"}}>
             <div className="row">
                 <div className="column">
-                    <img src={image} alt={name} className="villagerImage" />
+                    <img src={image} alt={name} className="villagerImage" style={{color: textColor, border: `5px solid ${textColor}`}} />
                     <h1> {name} </h1>
                 </div>
                 <div className="column">
                 <ul>
-                        <li>{personality} {species}</li>
+                        <li style={{fontSize: "18pt"}}> {personality} {species} </li>
                         <li>Birthday: {birthday}</li>
                         <li>Catchphrase: "{catchphrase}"</li>
                         <li>Saying: "{saying}"</li>

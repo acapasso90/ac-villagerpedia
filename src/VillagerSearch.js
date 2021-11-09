@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
 import VillagerInfo from "./VillagerInfo";
-import leafIcon from './images/leaficon.png'
+import leafIcon from './images/leaficon.png';
+import loader from "./images/loader.gif";
 
 export default function VillagerSearch(){
 const [loaded, setLoaded] = useState(false);
@@ -93,6 +94,25 @@ useEffect(() => {
 
       }
     else {
-       return("not loaded");
+       return(
+         <div className="loading">
+            <header>
+                <div className="row">
+                  <div className="headerCol">
+                    <div className="row">
+                      <img src={leafIcon} alt="leaficon" className="leafIcon" />
+                      <h2> Villagerpedia </h2>
+                    </div>
+                  </div>
+                  <div className="headerCol">
+                      <form onSubmit={handleSubmit}>
+                      <input type="text" onChange={setSearch} placeholder="Search by Name or Species" />
+                      </form>
+                  </div>
+                </div>
+             </header>
+             <img src={loader} alt="loading" />
+           <h2>Loading Villagers</h2>
+         </div>);
    }
 }
