@@ -39,7 +39,7 @@ function hideInfo(){
 return( 
     <div className="VillagerInfo" >
         
-        <img src={icon} alt={name} className="villagerIcon" onClick={showInfo}/>
+        <img src={icon} alt={name} className="villagerIcon" loading="lazy" onClick={showInfo}/>
         <p className="villagerName">{displayname} </p>
 
         <div className={`hidden${name.replace(" ", "-")}`} id="hiddenInfo" style={{color: textColor, border: `5px solid ${textColor}`, backgroundColor: bubbleColor, display: "none"}}>
